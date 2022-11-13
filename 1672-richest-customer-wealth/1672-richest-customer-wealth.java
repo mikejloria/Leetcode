@@ -26,11 +26,20 @@ class RichestCustomerWealth {
  * The 2nd customer is the richest with a wealth of 10.
  */
     public int maximumWealth(int[][] accounts) {
-        int number = 0;
-        return number;
-
+        int biggestBankValue = 0;
+        for(int[] customer : accounts) {
+            int wealthSoFar = 0;
+            for(int bank : customer) {
+                wealthSoFar += bank;
+            }
+            biggestBankValue = Math.max(biggestBankValue, wealthSoFar);
+        }
+        return biggestBankValue;
     }
     public static void main(String[] args) {
+        RichestCustomerWealth solution = new RichestCustomerWealth();
+        int[][] accounts = {{4,7,3},{1,8,2},{0,3,6}};
+        System.out.println(solution.maximumWealth(accounts));
 
     }
 }
