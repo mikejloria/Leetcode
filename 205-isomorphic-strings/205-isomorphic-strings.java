@@ -4,7 +4,7 @@ class IsomorphicStrings {
     public boolean isomorphicStrings (String s, String t) {
         if(s == null || s.length() <= 1) return true;
 
-        Map<Character, Character> map = new HashMap();
+        Map<Character, Character> map = new HashMap<Character, Character>();
         for (int i = 0; i < s.length(); i++) {
             char a = s.charAt(i);
             char b = t.charAt(i);
@@ -22,5 +22,10 @@ class IsomorphicStrings {
         }
         return true;
     }
-    public static void main (String[] args) {}
+    public static void main (String[] args) {
+        IsomorphicStrings solution = new IsomorphicStrings();
+        String s = "egg";
+        String t = "add";
+        System.out.println(Boolean.toString(solution.isomorphicStrings(s, t)));
+    }
 }
