@@ -1,3 +1,5 @@
+import java.util.HashSet;
+
 class LongestPalindrome {
     // for String problems think about Mappings as a solution
     // palindrome is a String that can be read the same forward and backward
@@ -20,6 +22,9 @@ class LongestPalindrome {
     }
 
     public static void main (String[] args) {
+        LongestPalindrome solution = new LongestPalindrome();
+        String s = "aabbccdterf";
+        System.out.println(solution.longPlaindrome(s));
 
     }
 }
