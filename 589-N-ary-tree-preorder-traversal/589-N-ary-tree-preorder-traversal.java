@@ -36,8 +36,8 @@ class NAryPreorderTraversal  {
 	    if (root == null) return list;
 
 	    list.add(root.val);
-	    for (Node node : root.children)
-		    predorderRecursive(node);
+	    for (Node child : root.children)
+		    predorderRecursive(child);
 
 	    return list;
     }
